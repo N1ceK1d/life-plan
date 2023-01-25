@@ -29,15 +29,7 @@ export default {
     components: {TodosItem},
     data() {
         return {
-            tasks: [
-                {text: 'Выучить 2 песни на гитаре', isComplete: false},
-                {text: 'Прочитать 10 книг за два месяца', isComplete: false}, 
-                {text: 'Создать сайт', isComplete: false}, 
-                {text: 'Купить одежду', isComplete: false}, 
-                {text: 'Заняться спортом', isComplete: false}, 
-                {text: 'Досмотреть запланированные аниме', isComplete: false}, 
-                {text: 'Начать ухаживать за кожей лица', isComplete: false}
-            ],
+            tasks: [],
             taskText: '',
             doneTasks: 0
         }

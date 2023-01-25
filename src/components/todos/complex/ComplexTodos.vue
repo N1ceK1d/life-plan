@@ -42,12 +42,6 @@ export default {
     data() {
         return {
             complexTasks: [
-                {title: 'Задача 1', description: 'Задача 1', isComplete: false},
-                {title: 'Задача 2', description: 'Задача 2', isComplete: false},
-                {title: 'Задача 3', description: 'Задача 3', isComplete: false},
-                {title: 'Задача 4', description: 'Задача 4', isComplete: false},
-                {title: 'Задача 5', description: 'Задача 5', isComplete: false},
-                {title: 'Задача 6', description: 'Задача 6', isComplete: false},
             ],
             taskTitle: '',
             taskText: ''
