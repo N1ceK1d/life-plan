@@ -1,0 +1,122 @@
+.day {
+    background-color: rgb(235, 235, 235);
+    margin: 1vw;
+    width: 25vw;
+    min-height: 40vh;
+}
+
+.day h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.7vw;
+    background-color: darkcyan;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+thead td {
+    font-size: 1.5vw;
+    border-bottom: solid .2vw black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+thead td:hover {
+    cursor: pointer;
+    background-color: rgb(196, 195, 195);
+}
+
+table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 25vw;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.add-event {
+    background-color: darkcyan;
+    border: none;
+    font-size: 1.5vw;
+    display: block;
+    margin: 1vh auto;
+    width: 5vw;
+    color: white;
+}
+
+.add-event:hover {
+    cursor: pointer;
+    box-shadow: .1vw .2vw 1vw darkcyan;
+}
+
+.delete {
+  color: crimson;
+  width: 2vw;
+  height: 5vh;
+  font-size: 1.5vw;
+}
+
+.delete:hover {
+    cursor: pointer;
+    text-shadow: crimson .1vw .2vw 1vw ;
+}
+
+.days {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}  
+
+@media all and (min-width: 200px) and (max-width: 900px) {
+    .day {
+        background-color: rgb(235, 235, 235);
+        margin: 1vw;
+        width: 85vw;
+        min-height: 40vh;
+    }
+    
+    .day h2 {
+        margin: 0;
+        text-align: center;
+        font-size: 6vw;
+        background-color: darkcyan;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    thead td {
+        font-size: 5vw;
+        border-bottom: solid .2vw black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    table {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-width: 85vw;
+        text-align: center;
+        font-size: 1.2vw;
+    }
+    
+    .add-event {
+        background-color: darkcyan;
+        border: none;
+        font-size: 5vw;
+        display: block;
+        margin: 1vh auto;
+        width: 15vw;
+        color: white;
+    }
+    
+    .delete {
+      color: crimson;
+      width: 6vw;
+      height: 5.5vh;
+      font-size: 6vw;
+    }
+    
+    .days {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
+}

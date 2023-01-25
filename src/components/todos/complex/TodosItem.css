@@ -1,0 +1,114 @@
+.complex-item {
+    width: 20vw;
+    height: 35vh;
+    background-color: darkcyan;
+    color: white;
+    padding: 1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1vw;
+}
+
+.complex-item-title {
+    font-size: 1.5vw;
+    height: 4vh;
+}
+
+.complex-item-description {
+    font-size: 1.2vw;
+    height: 15vh;
+}
+
+.complex-item:hover {
+    box-shadow: .1vw .2vw 1vw darkcyan;
+}
+
+.complex-marker {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5vw;
+}
+
+.complex-item .done {
+    background-color: gray;
+}
+
+.complex-item .done .item-title {
+    text-decoration: line-through;
+    color: rgb(75, 75, 75);
+}
+
+.complex-item .done .marker {
+    color: rgb(75, 75, 75);
+}
+
+.complex-item .done .marker:hover {
+    text-shadow: rgb(75, 75, 75) .1vw .2vw .8vw ;
+}
+
+.complex-item .done:hover {
+    box-shadow: rgb(75, 75, 75) .1vw .2vw .8vw ;
+}
+
+.complex-item .done-marker {
+    color: greenyellow;
+}
+
+.complex-item .done-marker:hover {
+    cursor: pointer;
+    text-shadow: greenyellow .1vw .2vw 1vw ;
+}
+
+.complex-item .remove-marker {
+    color: crimson;
+    text-align: left;
+}
+
+.complex-item .remove-marker:hover {
+    cursor: pointer;
+    text-shadow: crimson .1vw .2vw 1vw ;
+}
+
+.complex-item .marker {
+    margin-left: 1vw;
+    text-align: left;
+    font-size: 1.5vw;
+}
+
+.complex-item .marker-block {
+    display: flex;
+    flex-direction: row;
+}
+
+@media all and (min-width: 200px) and (max-width: 900px) { 
+    .complex-item {
+        width: 80vw;
+        height: 40vh;
+        background-color: darkcyan;
+        color: white;
+        padding: 1vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 1vw;
+    }
+    
+    .complex-item-title {
+        font-size: 5vw;
+        height: 4vh;
+    }
+    
+    .complex-item-description {
+        font-size: 5vw;
+        height: 17vh;
+    }
+
+    .complex-marker {
+        display: flex;
+        flex-direction: row;
+        font-size: 5vw;
+    }
+    
+    .complex-item .marker {
+        margin-left: 4vw;
+        text-align: left;
+        font-size: 5vw;
+    }
+}

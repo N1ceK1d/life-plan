@@ -1,0 +1,96 @@
+.simple-item {
+    background-color: darkcyan;
+    color: white;
+    font-size: 1.5vw;
+    width: 30vw;
+    padding: .5vh 2vw;
+    margin: .5vh auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.simple-item:hover {
+    cursor: pointer;
+    box-shadow: .1vw .2vw 1vw darkcyan;
+}
+
+.simple-item .item-title {
+    width: 28vw;
+}
+
+.done {
+    background-color: gray;
+}
+
+.done .item-title {
+    text-decoration: line-through;
+    color: rgb(75, 75, 75);
+}
+
+.done .marker {
+    color: rgb(75, 75, 75);
+}
+
+.done .marker:hover {
+    text-shadow: rgb(75, 75, 75) .1vw .2vw .8vw ;
+}
+
+.done:hover {
+    box-shadow: rgb(75, 75, 75) .1vw .2vw .8vw ;
+}
+
+.done-marker {
+    color: greenyellow;
+}
+
+.done-marker:hover {
+    cursor: pointer;
+    text-shadow: greenyellow .1vw .2vw 1vw ;
+}
+
+.remove-marker {
+    color: crimson;
+    text-align: left;
+}
+
+.remove-marker:hover {
+    cursor: pointer;
+    text-shadow: crimson .1vw .2vw 1vw ;
+}
+
+.simple-item .marker {
+    margin-left: 1vw;
+    text-align: left;
+    font-size: 1.5vw;
+}
+
+.simple-item .marker-block {
+    display: flex;
+    flex-direction: row;
+}
+
+@media all and (min-width: 200px) and (max-width: 900px) { 
+    .simple-item {
+        background-color: darkcyan;
+        color: white;
+        font-size: 5vw;
+        width: 80vw;
+        padding: .5vh 2vw;
+        margin: .5vh auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .simple-item .item-title {
+        width: 65vw;
+        word-wrap: break-word;
+    }
+
+    .simple-item .marker {
+        margin-left: 3vw;
+        text-align: left;
+        font-size: 5vw;
+    }
+}

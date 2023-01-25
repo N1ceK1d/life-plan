@@ -1,0 +1,75 @@
+.row-item .stopchange {
+    color: crimson;
+}
+
+.row-item .stopchange:hover {
+    cursor: pointer;
+    text-shadow: crimson .1vw .2vw 1vw;
+}
+    
+.row-item label {
+    display: block;
+    background-position: center;
+    background-size: 100%;
+    width: 1.5vw;
+    height: 4.2vh;
+    font-size: 1.7vw;
+    color: darkcyan;
+}
+
+.row-item label:hover {
+    cursor: pointer;
+    text-shadow: darkcyan .1vw .2vw 1vw;
+}
+
+.row-item input[type="checkbox"] {
+    opacity: 0;
+}
+
+.row-item .move {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+    font-size: 1.2vw;
+    width: 10vw;
+}
+
+.row-item .time {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+    font-size: 1.2vw;
+    width: 5vw;
+}
+
+@media all and (min-width: 200px) and (max-width: 900px) {
+    .row-item label {
+        display: block;
+        background-position: center;
+        background-size: 100%;
+        width: 5vw;
+        height: 4.2vh;
+        font-size: 6vw;
+        color: darkcyan;
+    }
+
+    .row-item .move {
+        border: none;
+        background-color: rgb(235, 235, 235);
+        text-align: center;
+        font-size: 4vw;
+        width: 40vw;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .row-item .time {
+        border: none;
+        background-color: rgb(235, 235, 235);
+        text-align: center;
+        font-size: 4vw;
+        width: 20vw;
+        margin: 0;
+        padding: 0;
+    }
+}

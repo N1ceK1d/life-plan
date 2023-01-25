@@ -1,0 +1,60 @@
+header {
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 1vh .5vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1vh 12.45vw;
+    background-color: darkcyan;
+    text-decoration: none;
+}
+
+header h1:hover {
+    cursor: pointer;
+    background-color: rgb(1, 110, 110);
+}
+
+.active > h1 {
+    background-color: rgb(1, 110, 110);
+}
+
+@media all and (min-width: 200px) and (max-width: 900px) {
+    body {
+        margin: 0;
+    }
+
+    header {
+        text-align: center;
+        font-size: 5vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        padding: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    header h1 {
+        margin-bottom: 1vh;
+        padding: 0;
+        background-color: darkcyan;
+        text-decoration: none;
+    }
+    
+}
