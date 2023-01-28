@@ -6,12 +6,12 @@
                 <div>
                     <label for="title">Название задачи</label>
                     <input name="title" type="text" v-model="taskTitle" placeholder="Введите задачу"/>
-                    <button v-on:click="addTask">Добавить</button>
+                    <button :disabled="!taskText.length || !taskTitle.length" v-on:click="addTask">Добавить</button>
                     <p class="complex-info">Всего задач: {{ complexTasks.length }}</p>
                 </div>
                 <div>
                     <label for="description">Описание задачи</label>
-                    <textarea name="description" class="task-description" v-model="taskText"></textarea>
+                    <textarea placeholder="Описание задачи" name="description" class="task-description" v-model="taskText"></textarea>
                 </div>
             </div>
             <div class="complex-statistic">
@@ -27,6 +27,7 @@
                     :description="item.description"
                     :removeItem="removeItem"
                     />
+                    <p class="nothing-text" v-if="complexTasks.length == 0">Пусто</p>
             </div>
         </div>
     </div>
@@ -41,10 +42,15 @@ export default {
     components: { TodosItem },
     data() {
         return {
-            complexTasks: [
-            ],
+            complexTasks: [],
             taskTitle: '',
             taskText: ''
+        }
+    },
+    created() {
+        if(localStorage.getItem('complexTasks')) {
+            this.complexTasks = JSON.parse(localStorage.getItem('complexTasks'));
+            localStorage.setItem("complexTasks", JSON.stringify(this.complexTasks));
         }
     },
     methods: {
@@ -55,6 +61,7 @@ export default {
             this.complexTasks.push({title: this.taskTitle, description: this.taskText});
             this.taskText = '';
             this.taskTitle = '';
+            localStorage.setItem("complexTasks", JSON.stringify(this.complexTasks));
         }
     }
 }

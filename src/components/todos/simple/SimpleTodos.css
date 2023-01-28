@@ -61,6 +61,22 @@
   scrollbar-width: none; 
 }
 
+.simple-block .nothing-text {
+    font-size: 2vw;
+    text-align: center;
+    color: grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todos-block button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.todos-block button:disabled:hover {
+    box-shadow: .1vw .2vw 1vw #666666;
+}
+
 @media all and (min-width: 200px) and (max-width: 900px) {
     .simple-block h1 {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -104,4 +120,17 @@
         width: 50vw;
         margin-left: 8vw;
     }
+
+    .simple-block .nothing-text {
+        font-size: 6vw;
+        text-align: center;
+        color: grey;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .todos-block button:disabled {
+      background-color: #cccccc;
+      color: #666666;
+    }
+        
 }

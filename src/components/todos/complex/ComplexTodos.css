@@ -97,6 +97,15 @@
     font-size: 1.5vw;
 }
 
+.complex-block .nothing-text {
+    font-size: 6vw;
+    text-align: center;
+    margin-left: 28vw;
+    margin-top: 0;
+    color: grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 @media all and (min-width: 200px) and (max-width: 900px) { 
     .complex-block h1 {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -183,4 +192,12 @@
     .complex-block .complex-list {
         margin-left: 0;
     }
+
+    .complex-block .nothing-text {
+        font-size: 6vw;
+        text-align: center;
+        color: grey;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
 }

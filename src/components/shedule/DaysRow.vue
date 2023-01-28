@@ -1,7 +1,7 @@
 <template>
     <tr class="row-item">
-        <td class="line"><input required class="time" type="text" :v-model="lineTime" :readonly="!isChecked"></td>
-        <td class="line"><input required class="move" type="text" :v-model="lineAction" :readonly="!isChecked" ></td>
+        <td class="line"><input class="time" type="text" :v-model="lineTime" :readonly="!isChecked"></td>
+        <td class="line"><input class="move" type="text" :v-model="lineAction" :readonly="!isChecked" ></td>
         <td>
             <label :class="{ 'stopchange' : isChecked }">
                 &#9998;

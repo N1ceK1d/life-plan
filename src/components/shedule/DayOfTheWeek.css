@@ -66,6 +66,15 @@ table {
     justify-content: center;
 }  
 
+.day button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+}
+  
+.day button:disabled:hover {
+    box-shadow: .1vw .2vw 1vw #666666;
+}
+
 @media all and (min-width: 200px) and (max-width: 900px) {
     .day {
         background-color: rgb(235, 235, 235);

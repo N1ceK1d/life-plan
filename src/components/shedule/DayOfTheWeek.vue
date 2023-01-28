@@ -10,10 +10,18 @@
           </thead>
           <tbody>
             <DaysRow v-for="(task, key) in this.tasksList" 
-                :key="key" :index="key" :time="task.time" :action="task.action" :removeAction="removeItem"/>
+                :key="key" 
+                :index="key" 
+                :time="task.time" 
+                :action="task.action" 
+                :removeAction="removeItem"/>
           </tbody>
         </table>
-        <button class="add-event" :id="id" v-on:click="add">+</button>
+        <button 
+            :disabled="!this.tasksList[tasksList.length]" 
+            class="add-event" :id="id" v-on:click="add">
+            +
+        </button>
       </div>
 </template>
 
@@ -27,7 +35,8 @@ export default {
     components: { DaysRow },
     data() {
         return {
-            tasksList: this.tasks
+            tasksList: this.tasks,
+            isChecked: false,
         }
     },
     methods: {

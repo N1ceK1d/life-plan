@@ -93,4 +93,8 @@
         text-align: left;
         font-size: 5vw;
     }
+
+    .done {
+        background-color: gray;
+    }
 }
