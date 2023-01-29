@@ -20,26 +20,25 @@
         </div>
         <div class="complex-list-block">
             <div class="complex-list">
-                <TodosItem v-for="(item, key) in complexTasks"
-                    :key="key"
-                    :id="key" 
-                    :title="item.title" 
-                    :description="item.description"
-                    :removeItem="removeItem"
-                    />
-                    <p class="nothing-text" v-if="complexTasks.length == 0">Пусто</p>
+                <div v-for="(item, key) in this.complexTasks" :key="key" class="complex-item" :class="{'done' : item.isDone}">
+                    <p class="complex-item-title">{{ item.title }}</p>
+                    <p class="complex-item-description">{{ item.description }}</p>
+                    <div class="complex-marker">
+                        <p class="marker done-marker" v-on:click="setDone(item, key)">&#10004;</p>
+                        <p class="marker remove-marker" v-on:click="removeItem(key)"><b>X</b></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import TodosItem from './TodosItem.vue';
+import './TodosItem.css';
 import './ComplexTodos.css';
 
 export default {
     name: 'ComplexTodos',
-    components: { TodosItem },
     data() {
         return {
             complexTasks: [],
@@ -56,13 +55,24 @@ export default {
     methods: {
         removeItem: function(index) {
             this.complexTasks.splice(index, 1);
+            localStorage.setItem("complexTasks", JSON.stringify(this.complexTasks));
         }, 
         addTask: function() {
-            this.complexTasks.push({title: this.taskTitle, description: this.taskText});
+            this.complexTasks.push({title: this.taskTitle, description: this.taskText, isDone: false});
             this.taskText = '';
             this.taskTitle = '';
             localStorage.setItem("complexTasks", JSON.stringify(this.complexTasks));
-        }
+        },
+        setDone: function(item, key) {
+            item.isDone = !item.isDone;
+            if(item.isDone) {
+                this.doneTasks += 1;
+            } else {
+                this.doneTasks -= 1;
+            }
+            this.complexTasks[key].isDone = item.isDone;
+            localStorage.setItem("complexTasks", JSON.stringify(this.complexTasks));
+        },
     }
 }
 </script>

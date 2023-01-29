@@ -196,6 +196,7 @@
     .complex-block .nothing-text {
         font-size: 6vw;
         text-align: center;
+        margin-left: 10vw;
         color: grey;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
